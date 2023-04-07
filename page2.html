@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="page2.css">
+    <script src="page.js"></script>
+    <title>Gallery 1</title>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+        <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                Damian Tub
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+              <a href=page.html#work>Galeria</a>
+              <a href=page.html#aboutMe>Acerca de mi</a>
+              <a href=page.html#contact>Contacto</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <div class="galeria">
+          <div class="item"><a href="#img1">      <img src="https://images.unsplash.com/photo-1548557700-561382b8a156?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHRyYWlufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+          </a></div>
+          <div class="item"><a href="#img2"><img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHBob25lc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a></div>
+          <div class="item"><a href="#img3"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/75379/3p.png"></a></div>
+          <div class="item"><a href="#img4"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/75379/4p.png"></a></div>
+        </div>
+        
+        <div class="modal" id="img1">
+          <div class="imagen">
+            <a class="ant" href="#img4"></a>
+            <a href="#" title="cerrar"></a>      <img src="https://images.unsplash.com/photo-1548557700-561382b8a156?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHRyYWlufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+
+            <a class="sig" href="#img2"></a>
+          </div>
+        </div>
+        <div class="modal" id="img2">
+          <div class="imagen">
+            <a class="ant" href="#img1"></a>
+            <a href="#" title="cerrar"></a><img src="https://images.unsplash.com/photo-1620288650879-20db0eb38c05?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHBob25lc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            <a class="sig" href="#img3"></a>
+          </div>
+        </div>
+        <div class="modal" id="img3">
+          <div class="imagen">
+            <a class="ant" href="#img2"></a>
+            <a href="#" title="cerrar"></a><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/75379/3g.jpg">
+            <a class="sig" href="#img4"></a>
+          </div>
+        </div>
+        <div class="modal" id="img4">
+          <div class="imagen">
+            <a class="ant" href="#img3"></a>
+            <a href="#" title="cerrar"></a><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/75379/4g.jpg">
+            <a class="sig" href="#img1"></a>
+          </div>
+        </div>    
+      </main>
+</body>
+</html>

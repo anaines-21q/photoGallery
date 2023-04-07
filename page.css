@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: Helvetica, sans-serif
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #101B27;
+    position: relative;
+    font-weight: 100;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #F1F1F1;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #F1F1F1;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+
+  #work{
+    background-color: #0D0D0D;
+    height: 100%;
+  }
+  #contact{
+    background-color: #C0AFAE;
+    height:100vh
+  }
+
+  #aboutMe{
+    background-color:#D9D9D9;
+    height: 100vh;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /*  three equal columns next to each other */
+  .column {
+    flex: 24%;
+    max-width: 25%;
+    padding: 0 10px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .img-gallery{
+position: relative;
+transition: width 1s;
+width: 100%;
+
+  }
+  .img-gallery:hover{
+    width: 105%;
+  }
+.text-gallery{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  height: 30px;
+  background-color: rgba(200,200,200,0.5);
+}
+
+.img-gallery a{
+ text-decoration: none!important;
+ color: black!important;
+
+}
+  .card{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card img{
+    border-radius: 10%;
+    margin: 5px;
+}
+
+.card .details{
+    margin: 5px;
+}
+
+.card .details h2{
+    font-weight: 600;
+}
+
+.card .details p{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+
+  }
+
+  @media (max-width: 1000px) and (min-width: 800px) {
+    .column {
+      flex: 32%;
+      max-width: 33.33%;
+    }
+    .card{
+      flex-direction: column;
+    }
+    .card img{
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 48%;
+      max-width: 50%;
+    }
+    .card{
+      flex-direction: column;
+    }
+    .card img{
+      width: 70%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .card{
+      flex-direction: column;
+    }
+    .card img{
+      width: 70%;
+    }
+  }
+  
